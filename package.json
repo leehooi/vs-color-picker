@@ -1,0 +1,32 @@
+{
+    "name": "vs-color-picker",
+    "displayName": "VS Color Picker",
+    "description": "A tiny & smart color picker for web developer.",
+    "version": "0.0.1",
+    "publisher": "lihui",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/src/extension",
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "package": "vsce package"
+    },
+    "devDependencies": {
+        "vscode": "^1.0.0",
+        "@types/node": "^6.0.40"
+    },
+    "icon": "icon.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leehooi/vs-color-picker.git"
+    }
+}
