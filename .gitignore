@@ -4,3 +4,4 @@ ColorPicker.exe
 *.suo
 bin/
 obj/
+*.vsix
