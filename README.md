@@ -8,5 +8,5 @@ Or pick a color from screen:
 ![usage_sampler](readme_img/usage_sampler.gif)
 
 ## Usage
-The color picker is shown around cursor when typing or editing color values.
+The color picker is shown around cursor when typing or editing color value.
 When pick from screen, press `Enter` to pick the color, `Esc` to cancel.
