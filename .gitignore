@@ -1,2 +1,6 @@
 out
 node_modules
+ColorPicker.exe
+*.suo
+bin/
+obj/

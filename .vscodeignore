@@ -1,10 +1,7 @@
 .vscode/**
-.vscode-test/**
-out/test/**
-test/**
+ColorPicker/**
+readme_img/**
 src/**
 **/*.map
 .gitignore
 tsconfig.json
-vsc-extension-quickstart.md
-readme_img/**
