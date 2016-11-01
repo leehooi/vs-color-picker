@@ -28,7 +28,7 @@ class VSColorPicker {
 
         let postion = event.selections[0].active;
         let beforeString = event.textEditor.document.getText(new VSCode.Range(postion.line, 0, postion.line, postion.character));
-        if (/:\s*#$/.test(beforeString)) {
+        if (/:[\s\w]*#$/.test(beforeString)) {
             let that = this;
 
             this._timer = setTimeout(function () {
@@ -53,7 +53,7 @@ class VSColorPicker {
         let position = editor.selection.active;
         let line = position.line;
         let character = position.character;
-        let str1 = this.Match(/:\s*#(\w*)$/, editor.document.getText(new VSCode.Range(line, 0, line, character)));
+        let str1 = this.Match(/:[\s\w]*#(\w*)$/, editor.document.getText(new VSCode.Range(line, 0, line, character)));
         let str2 = this.Match(/^(\w*)[\s;]?/, editor.document.getText(new VSCode.Range(line, character, line, character + this.MAX_VALUE_LEN)));
         this.LaunchColorPickerWindow(str1 + str2, (value: string) => {
             editor.edit((edit: VSCode.TextEditorEdit) => {
