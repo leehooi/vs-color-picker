@@ -9,10 +9,9 @@ Or pick a color from screen:
 
 ## Usage
 There are three ways to launch color picker:
+
 1. After typing the character `#` or moving the caret after character `#`, the picker will be launched automatically.
-
 2. Execute command `VS Color Picker` in Command Pallete(`Ctrl + Shift + P` or `Cmd + Shift + P`).
-
 3. [Binding a key](https://code.visualstudio.com/docs/customization/keybindings) for command `extension.vs-color-picker`.
 
 ## Setting Options
