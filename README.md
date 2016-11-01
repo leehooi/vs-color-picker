@@ -8,5 +8,12 @@ Or pick a color from screen:
 ![usage_sampler](readme_img/usage_sampler.gif)
 
 ## Usage
-The color picker is shown around cursor when typing or editing color value.
-When pick from screen, press `Enter` to pick the color, `Esc` to cancel.
+There is three ways to launch color picker:
+1. After typing the character `#` or moving the caret after character `#`, the picker will be launched automatically.
+2. Execute command `VS Color Picker` in Command Pallete(`Ctrl + Shift + P` or `Cmd + Shift + P`).
+3. [Binding a key](https://code.visualstudio.com/docs/customization/keybindings) for command `extension.vs-color-picker`.
+
+## Setting Options
+This extension contributes the following variables to the [settings](https://code.visualstudio.com/docs/customization/userandworkspace):
+* `vs-color-picker.autoLaunch`: When `true`, the picker will be launched automatically. To disable auto-launch, set this option as `false`. Default value is `true`.
+* `vs-color-picker.autoLaunchDelay`: Milliseconds before launching. When further typing color number during this span, the picker won't be launched. Default value is `100`.

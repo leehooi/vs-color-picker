@@ -14,6 +14,12 @@
         "*"
     ],
     "main": "./out/src/extension",
+	"contributes": {
+		"commands": [{
+			"command": "extension.vs-color-picker",
+			"title": "VS Color Picker"
+		}]
+	},
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "compile": "tsc -p ./",
