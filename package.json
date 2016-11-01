@@ -2,7 +2,7 @@
     "name": "vs-color-picker",
     "displayName": "VS Color Picker",
     "description": "A tiny & smart color picker for web developer.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "lihui",
     "engines": {
         "vscode": "^1.5.0"
@@ -14,12 +14,14 @@
         "*"
     ],
     "main": "./out/src/extension",
-	"contributes": {
-		"commands": [{
-			"command": "extension.vs-color-picker",
-			"title": "VS Color Picker"
-		}]
-	},
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.vs-color-picker",
+                "title": "VS Color Picker"
+            }
+        ]
+    },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
         "compile": "tsc -p ./",
