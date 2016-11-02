@@ -4,7 +4,8 @@ A tiny & smart color picker for web developer.
 You can pick a color from system palette: 
 ![usage_palette](readme_img/usage_palette.gif)
 
-Or pick a color from screen:
+Or pick a color from screen. 
+Move cursor to the pixel and press `Enter` to pick, `Esc` to cancel:
 ![usage_sampler](readme_img/usage_sampler.gif)
 
 ## Usage
