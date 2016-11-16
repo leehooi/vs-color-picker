@@ -1,5 +1,5 @@
 # VS Color Picker
-A tiny & smart color picker for web developer. 
+A tiny & smart color picker for web developer(Windows only). 
 
 You can pick a color from system palette: 
 ![usage_palette](readme_img/usage_palette.gif)
