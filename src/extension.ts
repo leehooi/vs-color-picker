@@ -28,7 +28,7 @@ class VSColorPicker {
 
         let postion = event.selections[0].active;
         let beforeString = event.textEditor.document.getText(new VSCode.Range(postion.line, 0, postion.line, postion.character));
-        if (/:[\s\w]*#$/.test(beforeString)) {
+        if (/:[\s\w]*#\w*$/.test(beforeString)) {
             let that = this;
 
             this._timer = setTimeout(function () {

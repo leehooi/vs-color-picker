@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace ColorPicker
 {
@@ -21,8 +22,21 @@ namespace ColorPicker
 
         public static System.Windows.Media.Color ToColor(this string value)
         {
-            int color = Int32.Parse(value, System.Globalization.NumberStyles.HexNumber);
-            return color.ToColorReverse();
+            if (value.Length == 3)
+            {
+                var builder = new StringBuilder();
+                builder.Append(value[0], 2);
+                builder.Append(value[1], 2);
+                builder.Append(value[2], 2);
+                int color = Int32.Parse(builder.ToString(), System.Globalization.NumberStyles.HexNumber);
+                return color.ToColorReverse();
+            }
+            else
+            {
+                int color = Int32.Parse(value, System.Globalization.NumberStyles.HexNumber);
+                return color.ToColorReverse();
+            }
+            return System.Windows.Media.Colors.White;
         }
 
         public static System.Windows.Media.Color ToColor(this int value)
