@@ -2,6 +2,7 @@ out
 node_modules
 ColorPicker.exe
 *.suo
+*.user
 bin/
 obj/
 *.vsix
