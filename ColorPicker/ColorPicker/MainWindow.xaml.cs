@@ -101,8 +101,9 @@ namespace ColorPicker
         void btnPalette_Click(object sender, RoutedEventArgs e)
         {
             _isPaletteShowing = true;
-            var dialog = new System.Windows.Forms.ColorDialog();
+            var dialog = new ColorDialog();
             dialog.FullOpen = true;
+            dialog.Deactivated += (s, evt) => { this.Close(); };
             dialog.Color = System.Drawing.Color.FromArgb(Int32.Parse(labelCurrentColor.Text, System.Globalization.NumberStyles.HexNumber));
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
