@@ -38,8 +38,8 @@
         }
     },
     "scripts": {
-        "vscode:prepublish": "tsc -p ./",
-        "compile": "tsc -p ./",
+        "vscode:prepublish": "msbuild ColorPicker\\ColorPicker.sln && tsc -p ./",
+        "compile": "msbuild ColorPicker\\ColorPicker.sln && tsc -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "package": "vsce package",
         "publish": "vsce publish minor"
