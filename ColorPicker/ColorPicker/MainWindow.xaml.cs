@@ -11,6 +11,14 @@ namespace ColorPicker
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool IsForegroundWindow
+        {
+            get
+            {
+                return WinApi.GetForegroundWindow() == new WindowInteropHelper(this).Handle;
+            }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,12 +36,25 @@ namespace ColorPicker
 
             this.Deactivated += MainWindow_Deactivated;
 
+            new Timer(CheckWindowIsFallBehandTimer, null, 0, 500);
+
             btnFromScreen.Click += btnFromScreen_Click;
             btnPalette.Click += btnPalette_Click;
             panelCurrentColor.PreviewMouseMove += DragElement_PreviewMouseMove;
             labelCurrentColor.PreviewMouseMove += DragElement_PreviewMouseMove;
 
             ShowColor(App.StartUpColor);
+        }
+
+        void CheckWindowIsFallBehandTimer(object state)
+        {
+            this.Dispatcher.Invoke(() =>
+            {
+                if (!this.IsForegroundWindow)
+                {
+                    MainWindow_Deactivated(null, null);
+                }
+            });
         }
 
         void MainWindow_Deactivated(object sender, EventArgs e)

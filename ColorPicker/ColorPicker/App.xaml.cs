@@ -18,15 +18,6 @@ namespace ColorPicker
 
         void App_Startup(object sender, StartupEventArgs e)
         {
-            //var rect = new WinApi.Rect();
-            //WinApi.GetWindowRect(WinApi.GetForegroundWindow(), ref rect);
-            //StartUpPosition.X = rect.Left;
-            //StartUpPosition.Y = rect.Top;
-            //if (e.Args.Length == 2)
-            //{
-            //    StartUpPosition.X += Int32.Parse(e.Args[0]);
-            //    StartUpPosition.Y += Int32.Parse(e.Args[1]);
-            //}
             try
             {
                 StartUpColor = e.Args[0].ToColor();

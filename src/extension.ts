@@ -16,6 +16,7 @@ class VSColorPicker {
     readonly MAX_VALUE_LEN: number = 20;
 
     private _timer: NodeJS.Timer = null;
+    private _autoEditSelectionChanged: boolean = false;
 
     public OnTextEditorSelectionChange(event: VSCode.TextEditorSelectionChangeEvent) {
         if (!this._config.autoLaunch) {
@@ -24,6 +25,10 @@ class VSColorPicker {
         if (this._timer != null) {
             clearTimeout(this._timer);
             this._timer = null;
+        }
+        if (this._autoEditSelectionChanged) {
+            this._autoEditSelectionChanged = false;
+            return;
         }
 
         let postion = event.selections[0].active;
@@ -60,6 +65,7 @@ class VSColorPicker {
                 edit.delete(new VSCode.Range(line, character, line, character + str2.length));
                 edit.delete(new VSCode.Range(line, character - str1.length, line, character));
                 edit.insert(editor.selection.active, value);
+                this._autoEditSelectionChanged = true;
             });
         });
     }
