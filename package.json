@@ -2,7 +2,7 @@
     "name": "vs-color-picker",
     "displayName": "VS Color Picker",
     "description": "A tiny & smart color picker for web developer.",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "publisher": "lihui",
     "engines": {
         "vscode": "^1.5.0"
@@ -24,12 +24,12 @@
         "configuration": {
             "title": "vs-color-picker",
             "properties": {
-                "vs-color-picker:autoLaunch": {
+                "vs-color-picker.autoLaunch": {
                     "type": "boolean",
                     "default": true,
                     "description": "Automatically launch color picker when color edited"
                 },
-                "vs-color-picker:autoLaunchDelay": {
+                "vs-color-picker.autoLaunchDelay": {
                     "type": "number",
                     "default": 100,
                     "description": "delay before auto launch"
@@ -45,8 +45,9 @@
         "publish": "vsce publish minor"
     },
     "devDependencies": {
-        "vscode": "^1.0.0",
-        "@types/node": "^6.0.40"
+        "typescript": "^2.5.2",
+        "vscode": "^1.1.5",
+        "@types/node": "^7.0.43"
     },
     "icon": "icon.png",
     "homepage": "https://github.com/leehooi/vs-color-picker/blob/master/README.md",
