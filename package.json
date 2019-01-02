@@ -2,7 +2,7 @@
     "name": "vs-color-picker",
     "displayName": "VS Color Picker",
     "description": "A tiny & smart color picker for web developer.",
-    "version": "0.7.0",
+    "version": "1.0.0",
     "publisher": "lihui",
     "engines": {
         "vscode": "^1.5.0"
