@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 
 namespace ColorPicker
@@ -10,7 +11,24 @@ namespace ColorPicker
     {
         public App()
         {
+            CloseExistsProcess();
             this.Startup += App_Startup;
+        }
+
+        void CloseExistsProcess()
+        {
+            Process current = Process.GetCurrentProcess();
+            var processes = Process.GetProcessesByName(current.ProcessName);
+            foreach (Process process in processes)
+            {
+                if (process.Id != current.Id)
+                {
+                    if (process.MainModule.FileName == current.MainModule.FileName)
+                    {
+                        process.Kill();
+                    }
+                }
+            }
         }
 
         public static Point StartUpPosition = new Point();

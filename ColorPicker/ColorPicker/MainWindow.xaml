@@ -6,8 +6,7 @@
         ResizeMode="NoResize"
         BorderThickness="1"
         BorderBrush="#2d2d2d"
-        Background="#252525"
-        ShowInTaskbar="False">
+        Background="#252525">
     <StackPanel Orientation="Horizontal">
         <Label 
             x:Name="panelCurrentColor" 
